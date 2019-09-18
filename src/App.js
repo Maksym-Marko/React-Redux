@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Posts from './components/Posts';
-
 import { Provider } from 'react-redux';
-// import store from './redux/store';
-import store from './store';
 
+import Posts from './components/Posts';
+import PostForm from './components/PostForm';
+
+import store from './store';
 
 class App extends Component {
 
@@ -12,10 +12,11 @@ class App extends Component {
 
 		return(
 			<Provider store={store}>
-				<div>
-					<h1>All posts!</h1>
+				<div className="App">
+					<PostForm />
+					<hr />
+					<Posts />
 				</div>
-				<Posts />
 			</Provider>
 		)
 
